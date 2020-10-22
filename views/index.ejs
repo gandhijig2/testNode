@@ -1,0 +1,26 @@
+<html>
+    <body>
+
+        <div class="container">
+            <row>
+                <h1 class="text-center">Enter the menu items</h1>
+                <form class="col-6 mx-auto" action="/newtodo" method="POST">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="item" 
+                    placeholder="Please enter new food item" value="Please enter new food item">
+                    <span><button type="submit" class="btn btn-primary">Submit</button></span>
+                </div></form>
+            </row>
+        </div>
+
+        <div class="row">
+            <ul class="col-6 mx-auto">
+               <% for(var i=0; i < todoList.length; i++){ %>  
+                    <li> <%= todoList[i].name %> </li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+
+</html>
+
